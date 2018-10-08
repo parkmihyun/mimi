@@ -1,0 +1,1508 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+			<title></title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="css/index.css">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+			
+			<script src="js/jquery-3.3.1.min.js"></script>
+			<script src="js/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li id="submem">회원가입</li>
+                <li id="sublogin">로그인</li>
+				<li id="subfaq" onclick="sin_func(1);">F A Q</li>
+			</ul>
+		</header>
+		
+		<nav>
+			<ul id="ju_menu">
+				<li onclick="sin_func(1);">1</li>
+				<li onclick="sin_func(2);">2</li>
+				<li><div onclick="sin_func(0);"><img src="img/logo.png"></div></li>
+				<li onclick="sin_func(3);">4</li>
+				<li onclick="sin_func(4);">5</li>
+			</ul>
+			<div id="sub_menu">
+				<div id="sub_menu_1">
+					<ul id="m1" class="sub">
+						<li onclick="sin_func(1);">m1-1</li>
+						<li onclick="sin_func(1);">m1-2</li>
+						<li onclick="sin_func(1);">m1-3</li>
+						<li onclick="sin_func(1);">m1-4</li>
+					</ul>
+					<ul id="m2" class="sub">
+						<li onclick="sin_func(2);">m2-1</li>
+						<li onclick="sin_func(2);">m2-2</li>
+						<li onclick="sin_func(2);">m2-3</li>
+						<li onclick="sin_func(2);">m2-4</li>
+					</ul>
+					<ul id="m3" class="sub">
+
+					</ul>
+					<ul id="m4" class="sub">
+						<li onclick="sin_func(3);">m4-1</li>
+						<li onclick="sin_func(3);">m4-2</li>
+						<li onclick="sin_func(3);">m4-3</li>
+					</ul>
+					<ul id="m5" class="sub">
+						<li onclick="sin_func(4);">m5-1</li>
+						<li onclick="sin_func(4);">m5-2</li>
+						<li onclick="sin_func(4);">m5-3</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<section>
+		    
+		    
+		    <div id="popup">
+                    <div id="pop_img"><img src="img/logo.png"></div>
+                    <form name="input">
+                            <input type="text" id="id" autofocus placeholder="아이디">
+							<input type="password" id="pw" autofocus placeholder="비밀번호">
+				    </form>
+				    
+					<div id="pop_click1">로그인</div>
+					<div id="pop_click2">
+							회원이 아니신가요?
+                        <font style="font-weight:bold;">회원가입</font>
+					</div>
+					<button>X 닫기</button>
+            </div>
+            
+            <div id="popup2">
+                    <h2>MEMBERSHIP</h2>
+                    <table frameborder=0px align="center" width=100%>
+                        <form name="popup2_form">
+                            <tr height=50px>
+                                <td width=20%>한글성명</td>
+                                <td width=80%>
+                                    <input type="text" name="popup2_sung" class="input_2 input_1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>아 이 디</td>
+                                <td><input type="text" name="popup2_id" autofocus class="input_2 input_1"></td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호</td>
+                                <td><input type="password" autofocus class="input_2 input_1"></td>
+                            </tr>
+                            <tr>
+                                <td>전&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화</td>
+                                <td>
+                                    <select>
+                                        <option>010</option>
+                                        <option>011</option>
+                                        <option>031</option>
+                                        <option>02</option>
+                                        <option>051</option>
+                                        <option>053</option>
+                                    </select>
+                                    - <input type="text" name="popup2_tel_2" size=4 class="input_1 input_1_1"> - 
+                                    <input type="text" name="popup2_tel_3" size=4 class="input_1 input_1_1">
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>주민번호</td>
+                                <td>
+                                    <input type="text" name="at42_ju_1" size=6 class="input_3 input_1"> - 
+                                    <input type="password" name="at42_ju_2" size=7 class="input_3 input_1">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>우편번호</td>
+                                <td>
+                                    <input type="text" name="at42_post1" maxlength=3 size=3
+                                            onkeyup="at42_post(this,at42_form.at42_post2, 3);"
+                                            onkeypress="at42_post_number()" class="input_3 input_1"> - 
+
+                                    <input type="text" name="at42_post2" maxlength=3 size=3
+                                            onkeyup="at42_post(this,at42_form.at42_post1, 3);"
+                                            onkeypress="at42_post_number()" class="input_3 input_1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</td>
+                                <td>
+                                    <input type="text" name="at42_address"
+                                    size=50 class="input_2 input_1">
+                                </td>
+                            </tr>
+
+                            <tr id="at42_ss">
+                                <td>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;별</td>
+                                <td>
+                                    <input type="radio" value=1 name="at42_sex">&nbsp;남&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" value=2 name="at42_sex">&nbsp;여
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan=2  style="height:100px;">
+                                <font style="color:gray;"><input type="checkbox" id="check">
+                                14세 이상입니다. (필수)</font><br><br>
+                                <font style="font-size:12px;">* 회원가입에 필요한 최소한의 정보만 입력 받음으로써 고객님의 개인정보 수집을 최소화하고<br>
+                                &nbsp;&nbsp;편리한 회원가입을 제공합니다.</font></td>
+                            </tr>
+                            <tr id="ok_btn">
+                                <td colspan=2>
+                                    <input type="button" value="가입완료" onclick="at42_check(this.form)">
+                                    <input type="reset" value="다시쓰기">
+                                </td>
+                            </tr>
+                        </form>
+                    </table>
+				    <button>X 닫기</button>
+            </div>
+            
+            
+			<div id="sin0" class="sin">
+				<div id="sin0_1">
+						<div id="sin0_search">
+							<input type="text" 
+									placeholder="다양한 VINYL를 검색해보세요."
+									style="height:40px; width:600px; position:absolute;left:50%; 
+                                            margin-left:-300px; border:3px solid black;
+											font-size:16px; text-align:center;">		
+							<i class="fas fa-search" ></i>			
+						</div>
+						
+						<div id="sin0_sec1">
+							<div id="sin0_sec1_text">
+								<h2>새로운 음악적 경험과 취향을 탐색하는 플레이그라운드</h2>
+							</div>
+						
+							<div id="sin0_sec1_box">
+								<ul id="sin0_sec1_boxes">
+										<li  onclick="sin_func(2)"><img src="img/sin0/sec1-1.png"></li>
+										<li onclick="sin_func(3)"><img src="img/sin0/sec1-2.png"></li>
+										<li onclick="sin_func(4)"><img src="img/sin0/sec1-3.png"></li>
+								</ul>
+							</div>
+							
+							<div id="sin0_sec1_s">
+								<a href="#sin0_2">
+								<h2 style="color:#ccc;" class="sc">SCROLL DOWN</h2>
+								<i class="fas fa-arrow-circle-down"></i>
+								</a>
+							</div>
+						</div>
+				</div>
+				
+				<div id="sin0_2">
+                    <div id="sin0_2top">
+                        <div id="sin0_2top1">
+                            <h2>V I N Y L ' S&nbsp;&nbsp;H I S T O R Y</h2>
+                        </div>
+                        <div id="sin0_2top2">
+                            <p>바이닐 음반이라고 하는 LP는 Long play의 약자로써 축음기의 음반 중 하나입니다.</p>
+                            <p>한곡 재생 시 수시로 음반을 뒤집어야 하는 번거로운 SP음반의 단점을 보완하기 위하여 1인치에 소리골을 300줄로 촘촘히 늘리고 음반의 직경도 7인치에서 12인치로 늘리게 됩니다. 또한 음반의 재질을 셀락에서 플라스틱 비닐로 바꿔서 무게를 줄이고 동시에 음반이 깨지지 않도록 턴테이블 암의 무게를 1/100 수준으로 줄여 새로운 음반을 틀 수 있게 한 LP라는 음반이 새롭게 만들어졌습니다.</p><br><br>
+                            <p>시대를 초월해 사랑 받은 Legendary Vinyls 함께 만나보세요.</p>
+                            <div class="sin0_more" onclick="sin_func(2)">
+							M O R E
+								<div class="sin0_box"></div>
+						    </div>
+                        </div>
+                        <div id="sin0_2top3">
+                            <img src="img/sin0/top.png">
+                        </div>
+                    </div>
+                    
+                    <div id="sin0_2bg"></div>
+                    <div id="sin0_2sub">
+                        <div id="sin0_2sub1">
+                            <h2>S P E C I A L&nbsp;&nbsp;L I V E , L I V E , L I V E</h2>
+                        </div>
+                        <div id="sin0_2sub2">
+                            <p>음악은 스튜디오에서 만들어지지만 라이브 현장에서 완성되기도 한다.&nbsp; 뜨거운 열기와 함께 연주자와 관객이 하나되는 순간, 현장의 기록인 라이브 레코딩이야 말로 진정한 음악의 살아있는 에너지를 만날 수 있는 간접 경험이라 할 수 있다. 페스티벌의 계절을 맞이하여 최고의 라이브 명반들을 만나보자.</p>
+                            <div class="sin0_more" onclick="sin_func(2)">
+							M O R E
+								<div class="sin0_box"></div>
+						    </div>
+                        </div>
+                    </div>	
+					
+					<div id="sin0_2chart">
+                        <div id="sin0_2chart1">
+                            <h2>V I N Y L</h2>
+							<p>1950년대 이후 대중음악의 장르X연대별 큐레이션</p>
+                        </div>
+                        
+                        <div id="sin0_2chart2">
+                            <div class="chart21">
+                                <ul>
+                                    <li class="chart21_1">NEW | 신규 음반</li>
+                                    <li class="chart21_2">ESSENTIAL | 추천 음반</li>
+                                </ul>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="chart22">
+                                <ul>
+                                    <li><img src="img/sin0/sin0_2/chart1.jpg"></li>
+                                    <li>
+                                        <p style="margin-top:80px; color:darkred; font-weight: bold;">Jazz > 2000s~</p>
+                                        <h2>Both Directions At Once</h2><br>
+                                        <p>2018년 재즈 씬을 비롯해 대중음악에서 가장 화제를 모았던 John Coltrane의 미발표 앨범.</p>
+                                        <p>재즈의 알파와 오메가, 그리고 수많은 팝, 록 뮤지션들까지 영향을 끼쳤던 그이기에 이 앨범의 존재는 보다 특별하다.</p>
+                                        <p>1963년 Classic Quartet 시기에 녹음된 무제의 오리지널 튠들을 포함하고 있어 더욱 화제를 모았다.</p><br>
+                                        <p style="color:gray;">아티스트&nbsp; |&nbsp; John Coltrane &nbsp;&nbsp; 출판사&nbsp; |&nbsp; Impulse!</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="chart23">
+                                <ul>
+                                    <li><img src="img/sin0/sin0_2/chart2.jpg"></li>
+                                    <li>
+                                        <p style="margin-top:80px; color:darkred; font-weight: bold;">World > </p>
+                                        <h2>Stony Hill</h2><br>
+                                        <p>60회 Grammy Awards에서 Best Reggae Album 부문을 수상한 Damian Marley의 네 번째 솔로 앨범.</p>
+                                        <p>밥말리의 막내 아들로 13살부터 음악을 시작해 온 그는 21세기 자메이카 아티스트 중에서 성공적인 케이스로 손꼽힌다.</p>
+                                        <p>디지털 댄스홀부터 트랩에 이르는 다채로운 프로덕션과 함께 가사를 통해 레게 씬의 현재를 다시 한 번 각인시켰다.</p><br>
+                                        <p style="color:gray;">아티스트&nbsp; |&nbsp; Damian "Jr Gong Marley &nbsp;&nbsp; 출판사&nbsp; |&nbsp; Ghetto Youths International</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+				</div>
+				
+				<div id="sin0_3">
+				    <div id="sin03list" class="at">
+				        <p>3개월 동안 많이 열람한 음반</p>
+				        <div id="sin0_3box">
+                            <div id="sin03_img">
+                               <img src="img/sin0/sin0_3/1.jpg" id="sin03_pic">
+                            </div>
+                            <div id="sin03_li">
+                                <ul>
+                                    <li>1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21 
+                                        <font style="margin-left:700px;">Adele</font></li>
+                                    <li>2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+                                        <font style="margin-left:660px;">The Beatles</font></li>
+                                    <li>3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Rush of Blood to the Head
+                                        <font style="margin-left:455px;">Coldplay</font></li>
+                                    <li>4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nevermind
+                                        <font style="margin-left:610px;">Nirvana</font></li>
+                                    <li>5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; La La Land
+                                        <font style="margin-left:480px;">music by Justin Hurwitz</font></li>
+                                </ul>
+                            </div>
+                        </div>
+						<div id="box_text">
+                            <font style="color:white; font-size:20px; font-weight:bold;">21</font><br>Adele</div>
+                        <div id="box_bar"></div>
+				    </div>
+                </div>
+				
+				<div id="sin0_4"> 
+                       <div id="sin0_4chart1">
+                            <h2>P R I N C I P L E S</h2>
+							<p>VINYL & PLASTIC이 제안하는 좋은 음악의 4원칙</p>
+                            <p>VINYL & PLASTIC 큐레이션은 '좋은 음악'을 대하는 일상적 태도에 대한 기준을 두고 선정 원칙의 프레임을 유연하게 확장하고자 한다.<br>
+                                좋은 음악은 영감을 깨우고 자극하며(Inspiring), 일상에 생동감을 더한다(Vitalizing).<br>
+                                또한, 대중음악사에 전환점을 제시한 선구적인 음악(Pivotal)과 시대를 초월하는 진정한 음악(Timeless)도 놓쳐서는 안된다."</p>
+                                
+                            <div class="sin0_more" onclick="sin_func(4)">
+							M O R E
+							     <div class="sin0_box"></div>
+				            </div>
+                       </div>
+                       
+				       <div class="footer1">
+						<iframe name="footer" width=100% height=195px
+                                        src="footer.html" scrolling="no" frameborder=0></iframe>
+                       </div>
+				</div>
+				
+			</div>
+			
+			
+			
+			<div id="sin1" class="sin">
+					<div id="sin1_1">
+							<h2>VINYL & PLASTIC</h2>
+							 <div id="sin1_bgmove">
+									<img src="img/sin1/sin1_1/bag.jpg" width="1600" height="568">
+							</div>
+							<div id="sin1_1sub">
+									<p class="sin1_1_text">소비의 음악에서 소유의 음악으로</p>
+									<hr style="border:1px solid #909090; margin-top:15px;">
+									<p class="sin1_1_text2">세상 어디에서든 우리는 스마트폰 터치 몇 번이면 음악을 즐길 수 있다.<br>
+											하지만 동시에 음반이 들려주는 아날로그적 감동과 소유의 즐거움을 기억하고 갈망한다.<br>
+											우리는 뮤직 라이브러리를 통해 바이닐이라는 음악적 영감을 주목했고 더 많은 사람들과<br>
+											울림을 공유하기 위해 누구나 이용 가능한 퍼블릭 공간을 선보이며 아날로그와 디지털의<br>
+											경계에서Vinyl & Plastic은 사라져가던 '음반'에 대한 향수를 다시금 불러일으킨다.</p>
+							</div>
+							<div id="sin1_1sub2">
+									<p class="sin1_1_text">새로운 음악적 경험과 취향을 탐색하는 플레이그라운드</p>
+									<hr style="border:1px solid #909090; margin-top:15px;">
+									<p class="sin1_1_text2">
+											비틀즈가 걸었던 ABBEY ROAD의 교차로처럼, Vinyl & Plastic 출입구를 지나 바닥을<br>
+											걷는 순간 새로운 경험이 시작된다. 켜켜이 쌓인 바이닐과 CD를 넘기는 Digging 설렘,<br>
+											미세한 마찰음 마저도 음악으로 만드는 턴테이블과 카세트플레이어의 아날로그 사운드<br>
+											곳곳에 숨겨진 청음 기회를 통해 새로운 장르와 아티스트를 발견하는 즐거움까지 우리<br>
+											일상의 BGM이 된 음악을 온전히 직접 경험하고, 소유하는 공간, Vinyl & Plastic이다.</p>
+							</div>
+							<div id="sin1_1img">
+									<img src="img/sin1/sin1_1/sub1.jpg">
+							</div>
+							<div id="sin1_1img2">
+									<img src="img/sin1/sin1_1/sub2.jpg">
+							</div>
+					</div>
+			
+					<div id="sin1_2">
+							<h2>INFORMATION</h2>
+							 <div id="sin1_2_info">
+									<img src="img/sin1/sin1_1/map.jpg">
+							</div>
+							<p class="sin1_2_int">서울시 용산구 이태원로 248 (한남동 683-131) VINYL & PLASTIC</p>
+							<div class="sin1_more">Google 지도 보기 
+									<div class="sin1_box"></div>
+							</div>
+							<div id="sin1_2_se">
+									<ul>
+											<li><p>Contact</p><hr><p>02-2014-7800<br>vinylandplastic@hcs.com</p></li>
+											<li><p>Hours</p><hr><p>화 - 토요일 12:00-21:00<br>일요일 12:00-18:00<br>
+																* 매주 월요일, 설/추석 연휴 휴관<br> * 법정공휴일 운영시간 일요일과 동일</p></li>
+											<li><p>Parking</p><hr><p>주차 및 발레파킹 불가<br>(인근 공영주차장 혹은 대중교통 이용)</p></li>
+											<li><p>public transportation</p><hr>
+												<p>지하철 (6호선)<br>한강진역 3번 출구에서 도보 6분(400m)<br>이태원역 3번 출구에서 도보 11분(800m)<br>
+												<font style="color:#e88422; font-weight:500;">( 버스 - 110B번, 400번, 405번, 03번 )</font></p></li>
+									</ul>
+							</div>
+							<div id="sin1_2_se2">
+									<p class="sin1_2_text">주의사항</p>
+									<hr style="border:1px solid #909090; margin-top:7px;">
+									<ul>
+											<li><img src="img/sin1/sin1_2/pet.png"><p>반려동물 목줄 or 케이지 이용</p></li>
+											<li><img src="img/sin1/sin1_2/sel.png"><p>셀카봉 이용금지</p></li>
+											<li><img src="img/sin1/sin1_2/sm.png"><p>흡연 금지</p></li>
+											<li><img src="img/sin1/sin1_2/park2.png"><p>주차 및 발레파킹 불가</p></li>
+									</ul>
+							</div>
+					</div>
+					
+					<div id="sin1_3">
+					        <h2>NOTICE</h2>
+					        
+                            <div class="notice">
+                                <ul class="notice_title">
+                                    <li>[ 공지 ]</li>
+                                    <li>Vinyl ＆ Plastic 추석연휴 휴관 안내　　2018.08.30ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="notice_text" id="notice_text1">
+                                    <p>Vinyl ＆ Plastic 추석연휴 휴관 일정을 아래와 같이 안내 드리오니 이용에 착오 없으시기 바랍니다.<br><br>
+                                         · 휴관 기간：2018.09.23（일） ∼ 09.26（수）</p>
+                                </ul>
+                                
+                                <ul class="notice_title">
+                                    <li>[ 공지 ]</li>
+                                    <li>Vinyl ＆ Plastic 할인기간 안내　　2018.06.29ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="notice_text" id="notice_text3"
+                                    style="height: 400px;">
+                                    <p>Vinyl ＆ Plastic 카드 결제 시 할인 안내 드리니 이용에 참고하시기 바랍니다. <br><br><br>
+                                         ＜대상카드＞　모든 신용카드（무기명 법인ㆍGift카드 제외）<br><br>
+                                         ＜기간＞    　2018.09.01~2018.09.30<br><br><br>
+                                         ＜내용＞<br><br>
+                                            - 할인 대상 품목 및 카페 20% 현장 할인（도서 및 일부 품목 제외）<br><br>
+                                            - 100% 각 카드사 포인트 사용 가능<br><br>
+                                            - 5만원 이상 결제 시 2~3개월 무이자할부<br><br><br>
+                                         ＜유의사항＞<br><br>
+                                            - 카드 포인트 사용은 할인과 중복 적용 불가<br><br>
+                                            - 포인트 부족 시 잔여 포인트만큼 사용 가능（1 포인트부터 사용 가능）
+
+                                         </p>    
+                                </ul>
+                                
+                                <ul class="notice_title">
+                                    <li>[ 공지 ]</li>
+                                    <li>Vinyl ＆ Plastic 운영시간 변경 안내　　2016.12.29ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="notice_text" id="notice_text5"
+                                    style="height: 470px;">
+                                    <p>2017년 1월 3일 부로 Vinyl ＆ Plastic 운영시간이 변경됩니다.<br><br><br>
+                                         ＜운영시간 변경 내용＞<br><br><br>
+                                         · 변경 전 <br><br>
+                                            화-토요일 12：00 ~ 24：00<br><br>
+                                            일요일/법정공휴일 12：00 ~ 18：00<br><br>
+                                            매주 월요일 휴무, 설/추석연휴 휴무）<br><br><br>
+                                         · 변경 후 <br><br>
+                                            화-토요일 12：00 ~ 21：00<br><br>
+                                            일요일/법정공휴일 12：00 ~ 18：00<br><br>
+                                            매주 월요일 휴무, 설/추석연휴 휴무）<br><br><br>
+                                         · 적용일자<br><br>
+                                            2017년 1월 3일（화）부터 적용
+                                         </p>
+                                </ul>
+                                
+                                <ul class="notice_title">
+                                    <li>　　</li>
+                                    <li>Vinyl ＆ Plastic 2016.06.10 OPEN　　2016.06.10ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="notice_text" id="notice_text7"
+                                    style="height: 200px;">
+                                    <p>이 곳은 직접 보고, 듣고, 만지는 소유의 음악을 위한 공간입니다.<br><br>
+                                       음악을 즐기길 원하는 사람이라면 누구나 이용 가능한 퍼블릭 공간입니다.<br><br><br>
+                                       지금 Vinyl ＆ Plastic에서 바이닐과 CD가 선사하는 다채로운 경험을 통해 음반이 주는 아날로그적 즐거움을 만끽하시길 바랍니다. <br><br><br>
+                                       Music Playground. by Vinyl ＆ Plastic</p>
+                                </ul>
+                                
+                            </div>
+					</div>
+					
+					<div id="sin1_4">
+                           <h2>FAQ</h2>
+                           <div class="faq">
+                                <ul class="faq_title">
+                                    <li>이용 가능 시간은 어떻게 되나요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text1">
+                                    <p>화요일부터 토요일까지는 낮 12시부터 저녁 9시까지이며, 일요일과 법정 공휴일은 낮 12시부터 저녁 6시까지 운영됩니다.<br><br>
+                                        매주 월요일, 설/추석 연휴는 정기휴관일 입니다. 새해 첫날 1/1일은 공휴일 기준으로 운영됩니다.</p>
+                                </ul>
+                                
+                                <ul class="faq_title">
+                                    <li>주차가 가능한가요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text3">
+                                    <p>주차 및 발레파킹 서비스 이용이 불가하오니 양해 부탁 드립니다.</p>
+                                </ul>
+                                
+                                 <ul class="faq_title">
+                                    <li>스토어 내에서 사진 촬영이 가능한가요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text5">
+                                    <p>내·외부 사진촬영 가능하나 다른 고객에 방해를 줄 수 있는 플래시 / 삼각대 / 셀카봉을 이용한 촬영은 자제 부탁 드립니다.</p>
+                                </ul>
+                                
+                                <ul class="faq_title">
+                                    <li>식사나 음료를 마실 수 있는 장소가 있나요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text7">
+                                    <p>Vinyl & Plastic 건물 내 2층에 위치한 카페에서 간단한 스낵과 음료를 구매하실 수 있습니다.</p>
+                                </ul>
+                                
+                                <ul class="faq_title">
+                                    <li>교환 / 환불이 가능한가요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text9">
+                                    <p>미 개봉된 상품에 한하여 구입일로부터 7일이내 스토어를 방문하여 교환 / 환불이 가능합니다.  음료를 구매하실 수 있습니다.<br><br>
+                                    반드시 구입 시 발급된 영수증을 지참해 주시기 바랍니다.
+                                    </p>
+                                </ul>
+                                
+                                <ul class="faq_title">
+                                    <li>구입한 상품의 A/S가 가능한가요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text11">
+                                    <p>음반의 A/S는 불가합니다. 뮤직기어 상품의 A/S 관련 내용은 스태프에게 문의 부탁 드립니다.<br><br>
+                                    반드시 구입 시 발급된 영수증을 지참해 주시기 바랍니다.
+                                    </p>
+                                </ul>
+                                
+                                <ul class="faq_title">
+                                    <li>원하는 음반이 있는데, 매장에 보유하고 있지 않습니다. 주문도 가능한가요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text13">
+                                    <p>Vinyl & Plastic에서는 별도의 주문 판매는 하지 않습니다.<br><br>
+                                    다만 재고소진 된 음반에 대해서는 스태프에게 문의해 주시기 바랍니다.
+                                    </p>
+                                </ul>
+                                
+                                <ul class="faq_title">
+                                    <li>선물 포장 서비스나 배송서비스가 가능한가요</li>
+                                    <li><i class="fas fa-angle-down"></i></li>
+                                </ul>
+                                <ul class="faq_text" id="faq_text15">
+                                    <p>죄송합니다. 선물 포장 서비스는 제공되지 않고 있으며,<br><br>
+                                     물품은 현장구매만 가능하고 그 외의 배송서비스는 제공되지 않습니다.
+                                    </p>
+                                </ul>
+                            </div>
+                            <div class="footer1">
+							<iframe name="footer" width=100% height=195px
+                                        src="footer.html" scrolling="no" frameborder=0></iframe>
+                            </div>
+                        </div>
+                    
+			</div>
+			
+			<div id="sin2" class="sin">
+					<div id="sin2_1">
+								<h2>NEW RELEASES</h2>
+								<p class="sin2_1_text">음악 분야의 트렌드를 한눈에 파악할 수 있는 신보 안내</p>
+							    <div id="sin2_11">
+										<ul class="sin2_u1">
+											<li><img src="img/sin2/sin2_1/1.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/2.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/3.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/4.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/5.jpg" class="img"></li>
+											
+											<li><img src="img/sin2/sin2_1/6.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/7.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/8.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/9.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/10.jpg" class="img"></li>
+											
+											<li><img src="img/sin2/sin2_1/11.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/12.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/13.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/14.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/15.jpg" class="img"></li>
+											
+											<li><img src="img/sin2/sin2_1/16.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/17.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/18.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/19.jpg" class="img"></li>
+											<li><img src="img/sin2/sin2_1/20.jpg" class="img"></li>
+										</ul>
+								
+										<ul class="sin2_u2">
+											<li><p>UNITY</p><p>서사무엘</p></li>
+											<li><p>Sonatas for Violin</p><p>Marie-Claire Alain</p></li>
+											<li><p>Kaya</p><p>Bob Marley</p></li>
+											<li><p>Language</p><p>MNEK</p></li>
+											<li><p>Mamma Mia!</p><p>Various Artists</p></li>
+											
+											<li><p>Lil Boat 2</p><p>Lil Yachty</p></li>
+											<li><p>La Vie En Rose</p><p>Edith Piaf</p></li>
+											<li><p>Come Fly With Me</p><p>Frank Sinatra</p></li>
+											<li><p>We Get Requests</p><p>The Oscar Peterson Trio</p></li>
+											<li><p>Know.</p><p>Jason Mraz</p></li>
+											
+											<li><p>Love Me/Love Me Not</p><p>Honne</p></li>
+											<li><p>Mr. Ripley</p><p>Gabriel Yared</p></li>
+											<li><p>Wild Man Dance</p><p>Charles Lloyd</p></li>
+											<li><p>The Prisoner</p><p>Herbie Hancock</p></li>
+											<li><p>Nevermind</p><p>The Doors</p></li>
+											
+											<li><p>Morrison Hotel</p><p>Jason Mraz</p></li>
+											<li><p>Led Zeppelin II</p><p>Led Zeppelin</p></li>
+											<li><p>Dookie</p><p>Green Day</p></li>
+											<li><p>The Real Royal Albert</p><p>Bob Dylan</p></li>
+											<li><p>The Sound Of Music</p><p>Richard Rodgers</p></li>
+										</ul>
+								</div>
+								
+						<button class="sin2_rightB">
+						<i class="fas fa-caret-right" style="font-size:50px; color:black;"></i>
+						</button>
+						<button class="sin2_leftB">
+							<i class="fas fa-caret-left" style="font-size:50px; color:black;"></i>
+						</button>
+					</div>
+					
+					
+					<div id="sin2_2">
+				            <h2> ESSENTIAL</h2>
+							<p class="sin2_2_text"> 시대를 초월해 사랑 받은 Legendary Vinyls</p>
+							<div class="sin2_2_sub">
+								<p>뛰어난 음악적 완성도와 독창성으로 매체와 평론, 다양한 어워드에서 인정 받은 바이닐 명반을 소개한다.<br>
+										<font style="margin-top:15px; font-size:13px; color:gray">새로운 트렌드를 이끌고, 영감을 선사하며, 시대를 초월해 사랑받아 온 음반들을 직접 마주할 수 있다.</font></p>
+							</div>
+							
+							<div id="sin2_2box" class="sin2_2box">
+                                <ul class="sin2_2box1">
+                                    <li>
+                                            <img src="img/sin2/sin2_2/1.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>1999</p><p>Prince / 1982</p>
+                                               <p>- 수록곡 -</p><p>01. 1999<br>02. Little Red Corvette<br>03. Delirious</p>
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/2.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Controversy</p><p>Prince / 2015</p>
+                                               <p>- 수록곡 -</p><p>01. Controversy<br>02. Sexuality<br>03. Do Me, Baby</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/3.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Commodores</p><p>Commodores / 2017</p>
+                                               <p>- 수록곡 -</p><p>01. Squeeze The Fruit<br>02. Funny Feelings<br>03. Heaven Knows</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/4.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Innervisions</p><p>Stevie Wonder / 1973</p>
+                                               <p>- 수록곡 -</p><p>01. Too High<br>02. Visions<br>03. Living For The City</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/5.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Let's Get It On</p><p>Marvin Gaye / 2016</p>
+                                               <p>- 수록곡 -</p><p>01. Lets Get It On<br>02. Please Dont Stay<br>03. If I Should Die Tonight City</p>  
+                                            </div>
+                                    </li>
+                                </ul>
+                                <ul class="sin2_2box2"
+                                   style="position:relative; top:280px;">
+                                    <li>
+                                            <img src="img/sin2/sin2_2/6.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Brown Sugar</p><p>DAngelo / 2015</p>
+                                               <p>- 수록곡 -</p><p>01. Brown Sugar<br>02. Alright<br>03. Jonz In My Bonz</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/7.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>The Best Of Sade</p><p>Sade / 2016</p>
+                                               <p>- 수록곡 -</p><p>01. Your Love Is King<br>02. Hang On To Your Love<br>03. Smooth Operator</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/8.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>What's Going On</p><p>Marvin Gaye / 2016</p>
+                                               <p>- 수록곡 -</p><p>01. Whats Going On<br>02. Whats Happening Brother<br>
+                                               03. Flyin High In The Friendly Sky</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/9.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Back To Black</p><p>Amy Winehouse / 2013</p>
+                                               <p>- 수록곡 -</p><p>01. Rehab<br>02. You Know Im No Good<br>03. Me Mr Jones</p>  
+                                            </div>
+                                    </li>
+                                    <li>
+                                            <img src="img/sin2/sin2_2/10.jpg">
+                                            <div class="sin2_2hide">
+                                               <p>Aijuswanaseing</p><p>Musiq Soulchild / 2015</p>
+                                               <p>- 수록곡 -</p><p>01. Scratch Introlude<br>02. Girl Next Door feat. AAries<br>03. You And Me</p>  
+                                            </div>
+                                    </li>
+                                </ul>
+                            </div>
+							
+							
+					</div>
+
+
+					<div id="sin2_3">
+							<h2>MONTHLY SPECIAL</h2>
+							<p class="sin2_3_text">한 달에 한번, 새로운 키워드가 이끄는 음악적 경험</p>
+							<div class="sin2_3_sub">
+								<p>이 시대 힙합의 새로운 흐름을 이끌어가고 있는 ‘King Kendrick’. 그와 함께 그 주변에 있는 아티스트들의 지형도를 살펴보면 힙합 역사의 어제와 오늘 뿐 아니라 LA를 기반으로 한 새로운 대중음악의 흐름을<br>
+										느낄 수 있다. 그와 함께 작업했던, 혹은 영향을 주고받았던 아티스트들은 그의 어릴적 우상이었던 2Pac에서 오늘날 새로운 마에스트로 Kamasi Washington에 이르기까지 장르와 시대, 스타일을 넘나든다.</p>
+							</div>
+							<div id="sin2_3menu">
+									<div id="sin2_3big">
+											<div class="sin2_3small">
+												<img src="img/sin2/sin2_3/1.jpg" id="sin2_3pic">
+											</div>
+											<div class="sin2_3middle">
+													<ul>
+															<li><h2 id="middle0">Fin (Syd)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">Steve Lacy, Hit-Boy, Melo-X등 프로듀서와의 공동작업으로 화제를 모은 The Internet의 싱어 Syd의 첫 정규 앨범으로 새로운 LA의 R&B경향을 보여주면서 동시에 PBRNB 이후의 보다 폭 넓은 스펙트럼을 통해 솔로 아티스트로서의 완전한 탄생을 알린 Syd의 문제작!</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Shake Em Off 　　02. Know　　03. No Complaints　　04. Nothin To Somethin　　…</p></li>
+																	 
+															<li><h2  id="middle0">Yes Lawd! (NxWorries)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">언더그라운드와 메이져를 넘나들며 LA의 새로운 힙합 and 소울 사운드를 선보이는 유닛 Nx Worries는 Anderson Paak과 프로듀서 Knx로 이루어진 듀오. 다양한 소울, 훵크 샘플로 만들어진 독특한 사운드와 Anderson Paak의 카리스마 넘치는 보컬이 귀를 사로잡는다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Intro 　　02. Livvin　　03. Wngs　　04. Best One　　05. What More Can I Say　　…</p></li>
+																	 
+															<li><h2  id="middle0">Big Fish Theory (Vince Staples)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">발표하는 작품마다 화제를 일으키며 어느덧 힙합레이블 Def Jam 을 대표하는 래퍼가 된 Vince Staples의 최신작이자 2017년 최고의 힙합앨범 중 하나. 앨범타이틀 Big Fish Theory에 걸맞게 어항에 담긴 물고기 사진이 프린트된 2LP 구성으로 한정 발매되었다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Crabs In A Bucket Feat. Kilo Kish 　　02.Big Fish Feat. Juicy J　　…</p></li>
+																	 
+															<li><h2  id="middle0">4 Your Eyez Only (J. Cole)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">누구보다 지적이고 매력적인 표현으로 가득한 가사, 힙합계의 히트 공식을 따르지 않는 고집으로 완성한 J.Cole의 2016년 네번째 앨범 4 Your Eyez Only. 평단의 찬사는 물론 플래티넘의 판매고를 기록하면서 힙합씬의 현재를 이끌어가는 거물급 뮤지션으로서의 위치를 다시한번 확인하였다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. For Whom The Bell Tolls 　　02.Immortal　　03. Deja Vu　　04.Ville Mentality　　…</p></li>
+																	 
+															<li><h2  id="middle0">Headnod Suite (Karriem Riggins)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">이 시대 최고의 재즈 드러머로 Paul McCartney 와 함께 활동하기도 한 Karriem Riggins. 그의 두번째 비트 앨범인 이 작품은 비트의 실험 구조와 샘플링으로 탐구하는 비트메이커로서의 세계를 맛볼 수 있는 힙합 인스트루멘탈 앨범. 브라질리언부터 사이키델릭, 아웃 사운드의 독특. 자유분방한 시도가 돋보인다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Suite Intro 　　02.Other Side of the Track　　03. Yes Yes Yall　　04.Invasion　　…</p></li>
+																	 
+															<li><h2  id="middle0">Ctrl (SZA)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">TDE 소속의 싱어송라이터 SZA의 정규 데뷔 앨범. 그동안 다양한 경로로 소개된 음악들을 통해 센세이션을 일으켜왔지만 정규 앨범은 그 기대치를 뛰어넘으며 새로운 세대의 R&B, 소울 뮤지션의 극적인 탄생을 보여주고, 독특한 무드의 사운드와 개성 넘치는 표현력 깊이 있는 보이스로 최고의 앨범을 탄생시켰다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Supermodel 　　02. Love Galore Feat. Travis Scott　　03. Drew Barrymore　　…</p></li>
+													</ul>
+											</div>
+											
+											<div class="sin2_3middle2">
+													<ul>
+															<li><h2 id="middle0">Views(Drake)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">2015년 선공개되어 인터넷상에서 수많은 Meme을 만들어내며 열풍을 몰고왔던 싱글 Hotline Bling을 비롯하여, 댄스홀과 R&B 팝등에서 영향받은 완성도 높은 프로덕션으로 빚어낸 Drake의 신작.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">Side A )　01. Keep The Family Close 　　02. 9　　03. U With Me　　04. Feel No Ways<br>
+																	Side B )　01. Weston Road Flows 　　02. Redemption　　03. With You　　04. Faithful　　… </p></li>
+																	 
+															<li><h2  id="middle0">Still Brazy (YG)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">웨스트 코스트 랩퍼 YG의 두번째 스튜디오 앨범.　Twist My Fingaz 를 비롯해 Nipsey Nipsey Hussle 피처링의 FDT, Drake와 Kamaiyah이 참여한 Why You Always Hatin? 등 총 17곡이 수록되어있다. YG의 매력적인 보컬이 묘한 중독성으로 이어지는 곡들과 다양한 피처링을 느껴볼 수 있다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Pops Hot Intro 　　02. Dont Come To LA　　03. Who Shot Me　　…</p></li>
+																	 
+															<li><h2  id="middle0">Under Pressure (Logic)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">No I.D. 가 발굴하여 혜성처럼 등장한 Def Jam의 신인 랩퍼 Logic. 그의 데뷔작은 강렬한 리릭시즘을 바탕으로 DJ Dahi, Frank Dukes, S1 등의 막강한 프로듀서진이 참여하여 Kendrick Lamar와는 또다른 리얼리즘과 희망의 메시지를 전해주는 앨범으로 탄생하였다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Intro  　　02. Soul Food　　03.Im Gone 　　04. Gang Related　　…</p></li>
+																	 
+															<li><h2  id="middle0">Hot Soup (Danny Brown)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">디트로이트에는 Eminem만 있는 것이 아니다. 마치 디트로이트의 테크노 파이오니어들처럼 경계와 고정 관념을 깨고 랩의 새로운 가능성을 보여주고 있는 전무후무한 캐릭터, Danny Brown의 초기작 모음으로 클래식 힙합과 펑크, 로우파이적 접근을 아우르는 그의 독창성을 만나볼 수 있는 앨범.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Level One 　　02.Dance　　03. What Up Doe　　04.Ten Gs A Week　　…</p></li>
+																	 
+															<li><h2  id="middle0">99.9% (Kaytranada)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">캐나다의 그래미라고 불리우는 폴라리스 어워드에서 쟁쟁한 뮤지션들을 제치고 수상의 영광을 얻은 힙합/ 일렉트로닉 프로듀서 Kaytranada의 데뷔 정규 앨범. Gal Costa를 샘플링한 과감함부터 Anderson Paak 등의 화려한 참여진까지, 2016년을 대표하는 일렉트로닉 앨범!</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Track Uno 　　02.Bus Ride　　03. Got It Good　　04.Together　　…</p></li>
+																	 
+															<li><h2  id="middle0">Live At Capital Studios (Robert Glasper)</h2>
+																	<p class="middle1">＞ 앨범 소개</p>
+																	<p class="middle2">유서깊은 로스앤젤레스의 Capitol Studios에서 녹음한 Robert Glasper트리오의 스튜디오 라이브 앨범으로 다양한 R&B, 팝, 컨템포러리 튠들을 특유의 소울풀한 터치와 자유롭지만 무게감을 잃지 않는 구성과 연주로 풀어내고 있다.</p>
+																	 <p class="middle1">＞ 수록곡</p>
+																	 <p class="middle2">01. Intro　　02. I Dont Even Care　　03. Reckoner　　04.Barangrill　　…</p></li>
+													</ul>
+											</div>
+									</div>
+							
+									<div id="sin2_3at1" class="sin2_3at">
+										<div id="sin27_img1" ><img src="img/sin2/sin2_3/1.jpg"></div>
+										<div id="sin27_img2" ><img src="img/sin2/sin2_3/2.jpg"></div>
+										<div id="sin27_img3" ><img src="img/sin2/sin2_3/3.jpg"></div>
+										<div id="sin27_img4" ><img src="img/sin2/sin2_3/4.jpg"></div>
+										<div id="sin27_img5" ><img src="img/sin2/sin2_3/5.jpg"></div>
+										<div id="sin27_img6" ><img src="img/sin2/sin2_3/6.jpg"></div>
+									</div>
+									<ul class="sin2_u1">
+										<li><p>Fin</p><p>Syd</p></li>
+										<li><p>Yes Lawd!</p><p>NxWorries</p></li>
+										<li><p>Big Fish Theory</p><p>Vince Staples</p></li>
+										<li><p>4 Your Eyez Only</p><p>J. Cole</p></li>
+										<li><p>Headnod Suite</p><p>Karriem Riggins</p></li>
+										<li><p>Ctrl</p><p>SZA</p></li>
+									</ul>
+									
+									<div id="sin2_3at2" class="sin2_3at">
+										<div id="sin27_img7" ><img src="img/sin2/sin2_3/7.jpg"></div>
+										<div id="sin27_img8" ><img src="img/sin2/sin2_3/8.jpg"></div>
+										<div id="sin27_img9" ><img src="img/sin2/sin2_3/9.jpg"></div>
+										<div id="sin27_img10" ><img src="img/sin2/sin2_3/10.jpg"></div>
+										<div id="sin27_img11" ><img src="img/sin2/sin2_3/11.jpg"></div>
+										<div id="sin27_img12" ><img src="img/sin2/sin2_3/12.jpg"></div>
+									</div>
+									<ul class="sin2_u2">
+										<li><p>Views</p><p>Drake</p></li>
+										<li><p>Still Brazy</p><p>YG</p></li>
+										<li><p>Under Pressure</p><p>Logic</p></li>
+										<li><p>Hot Soup</p><p>Danny Brown</p></li>
+										<li><p>99.9%</p><p>Kaytranada</p></li>
+										<li><p>Live At Capital Studios</p><p>Robert Glasper</p></li>
+									</ul>
+									
+									
+									<p id="sin2_3leftB"><i class="fas fa-angle-left"></i></p>
+									<p id="sin2_3rightB"><i class="fas fa-angle-right"></i></p>
+							</div>
+					</div>
+					
+					
+					<div id="sin2_4">
+							<h2>ARTIST HIGHLIGHTS</h2>
+							<p class="sin2_4_text">대중음악 씬을 사로잡은 아티스트와 그들의 대표 음반</p>
+							<div class="sin2_4_sub">
+								<p>VINYL & PLASTIC은 독보적 행보로 대중음악씬에 영향력을 미친 아티스트를 선정해 집중 조명한다.
+										그들의 대표음반뿐 아니라 상대적으로 덜 알려졌지만 높은 음악적 가치를 지닌 음반까지 만날 수 있다.</p>
+							</div>
+						
+							<div id="sin2_4menu">
+								<div id="sin2_4iframe">
+									<iframe name="sin2_4ch" width=100%
+											height=900px   frameborder=0
+											src="sin2_4ch.html" scrolling="no">
+									</iframe>
+								</div>
+							</div>
+							<div class="footer1">
+									<iframe name="footer" width=100% height=195px
+                                     src="footer.html" scrolling="no" frameborder=0></iframe>
+                            </div>
+					</div>
+					
+			</div>
+			
+			
+			<div id="sin3" class="sin">
+			
+				<div id="sin3_1">
+						<h2>NEW RELEASES</h2>
+						<p class="sin3_1_text">음악 분야의 트렌드를 한눈에 파악할 수 있는 신보 안내</p>
+						<ul class="sin3_u1">
+							<li><img src="img/sin3/sin3_1/1.jpg"></li>
+							<li><img src="img/sin3/sin3_1/2.jpg"></li>
+							<li><img src="img/sin3/sin3_1/3.jpg"></li>
+							<li><img src="img/sin3/sin3_1/4.jpg"></li>
+							<li><img src="img/sin3/sin3_1/5.jpg"></li>
+							<li><img src="img/sin3/sin3_1/6.jpg"></li>
+						</ul>
+						<ul class="sin3_u2">
+							<li><p>9와 숫자들 99%, 베스트</p><p>9와 숫자들</p></li>
+							<li><p>TRAVEL:NOAH</p><p>HAON</p></li>
+							<li><p>Cantique d'Amour</p><p>Sunq-Won Yang, Enrico</p></li>
+							<li><p>#GOCHILD</p><p>Woodie Gochild</p></li>
+							<li><p>Anthem</p><p>Madeleine Peyroux</p></li>
+							<li><p>DAYTONA</p><p>Pusha T</p></li>
+						</ul>
+				</div>
+				
+				<div id="sin3_2">
+						<h2>ESSENTIAL</h2>
+						<p class="sin3_2_text">대중성과 독창성을 기준으로 큐레이션한 CD 명반들</p>
+						<div class="sin3_2_sub">
+								<p>시대와 장르의 경계를 넘어 뛰어난 대중성과 독창성으로 사랑 받아 온 CD 음반들을 소개한다.<br>
+										비록 히트곡의 대열에 합류하지는 못했으나 그 음악적 가치를 인정 받은 숨은 명반들도 함께 만날 수 있다.</p>
+						</div>
+						<ul class="sin3_u3">
+							<li><img src="img/sin3/sin3_2/1.jpg"></li>
+							<li><img src="img/sin3/sin3_2/2.jpg"></li>
+							<li><img src="img/sin3/sin3_2/3.jpg"></li>
+							<li><img src="img/sin3/sin3_2/4.jpg"></li>
+							<li><img src="img/sin3/sin3_2/5.jpg"></li>
+							<li><img src="img/sin3/sin3_2/6.jpg"></li>
+						</ul>
+						<ul class="sin3_u4">
+							<li><p>? [Digipak]</p><p>XXXTENTACION</p></li>
+							<li><p>Beerbongs & Bentleys</p><p>Post Malone</p></li>
+							<li><p>Enter The Wu-Tang</p><p>Wu-Tang Clan</p></li>
+							<li><p>Chet Baker Sings</p><p>Chet Baker</p></li>
+							<li><p>Beyond The Missouri Sky</p><p>Charlie Haden</p></li>
+							<li><p>Summertime</p><p>Various Artists</p></li>
+						</ul>
+						<ul class="sin3_u5">
+							<li><img src="img/sin3/sin3_2/7.jpg"></li>
+							<li><img src="img/sin3/sin3_2/8.jpg"></li>
+							<li><img src="img/sin3/sin3_2/9.jpg"></li>
+							<li><img src="img/sin3/sin3_2/10.jpg"></li>
+							<li><img src="img/sin3/sin3_2/11.jpg"></li>
+							<li><img src="img/sin3/sin3_2/12.jpg"></li>
+						</ul>
+						<ul class="sin3_u6">
+							<li><p>Declaration</p><p>Kings Of Convenience</p></li>
+							<li><p>Blue Madonna</p><p>Borns</p></li>
+							<li><p>Delirium</p><p>Ellie Goulding</p></li>
+							<li><p>Whiplash (위플래쉬) o.s.t.</p><p>Various Artists</p></li>
+							<li><p>맘마 미아! 2 o.s.t.</p><p>Various Artists</p></li>
+							<li><p>Eric Clapton</p><p>Various Artists</p></li>
+						</ul>
+						
+						<div class="sin3_more">
+							M O R E
+								<div class="sin3_box"></div>
+						</div>
+				</div>
+				
+				<div id="sin3_3">
+						<h2>BEST PICKS</h2>
+						<p class="sin3_3_text">시대와 장르를 넘나드는 Essential Plastic Selection</p>
+						<div class="sin3_3_sub">
+								<p>대중음악 씬을 사로잡은 대표적 음반들로 디스플레이된 벽인 Plastic Picks에서 지금 들어볼 수 있는 앨범을 만나보자.</p>
+						</div>
+						
+						<div id="sin3_menu">
+							<ul id="sin3_menu_ul">
+									<li>International</li>
+									<li>Korean</li>
+							</ul>
+						</div>
+						<div id="sin3_3box" class="sin3_3box">
+                            <ul class="sin3_3box1">
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg1.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>Everything Is Recorded</p><p>Everything Is Recorded / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Intro<br>02. Close But Not Quite<br>03. She Said</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg2.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>Dua Lipa</p><p>Dua Lipa / 2017</p>
+                                            <p>- 수록곡 -</p><p>01. Genesis<br>02. Lost In Your Light<br>03. Hotter Than Hell</p>  
+                                            </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg3.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>Electric Light</p><p>James Bay / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Introt<br>02. Wasted On Each Other<br>03. Pink Lemonade</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg4.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>Shawn Mendes</p><p>Shawn Mendes / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. In My Blood<br>02. Nervous<br>03. Lost In Japan</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg5.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>Speak Your Mind</p><p>Anne-Marie / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Cry<br>02. Ciao Adios<br>03. Alarm</p>  
+                                        </div>
+                                </li>
+                            </ul>
+                            <ul class="sin3_3box2"
+                                style="position:relative; top:280px;">
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg6.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>ranquility Base Hotel</p><p>Arctic Monkeys / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Star Treatment<br>02. One Point Perspective<br>03. American Sports</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg7.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>Voicenotes</p><p>Charlie Puth / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Track 1<br>02. Attention<br>03. Track 3</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg8.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>PTX Presents</p><p>Pentatonix / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Attention<br>02. Finesse<br>03. New Rules x Are You That Somebody</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg9.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>How Will You Know</p><p>Coin / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Dont Cry, 2020<br>02. Boyfriend<br>03. Talk Too Much</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg10.jpg">
+                                        <div class="sin3_3hide">
+                                            <p>AM Waves</p><p>Fat Beats / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Midnight In Richmond<br>02. Lenny<br>03. Take It Or Leave It</p>  
+                                        </div>
+                                </li>
+                            </ul>
+                        </div>
+							
+							
+				        <div id="sin3_3box2" class="sin3_3box2">
+                            <ul class="sin3_3box3">
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg11.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>Something New</p><p>태연 / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Something New<br>02. 저녁의 이유 All Night Long<br>03. 바람 바람 바람 Baram</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg12.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>The Story of Light</p><p>SHINee / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. All Day All Night<br>02. 데리러 가<br>03. Undercover</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg13.jpg">
+                                        <div class="sin3_3hide2">
+                                             <p>MONKEY HOTEL</p><p>Jannabi / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Goodnigh Intro<br>02. 뜨거운 여름밤은 가고 남은 건<br>03. Surprise!</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg14.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>How to find true love</p><p>Hyukoh / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Graduation<br>02. 하늘나라<br>03. LOVE YA!</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg15.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>jon</p><p>오존o3ohn / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Somehow<br>02. Oooh<br>03. 언제부터</p>  
+                                        </div>
+                                </li>
+                            </ul>
+                            <ul class="sin3_3box4"
+                                style="position:relative; top:280px;">
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg16.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>Love</p><p>ADOY / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Wonder<br>02. Young<br>03. Bike</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg17.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>Divided by Zero</p><p>3rd Line Butterfly / 2017</p>
+                                            <p>- 수록곡 -</p><p>01. 나를 깨운네<br>02. Put Your Needle<br>03. Sense Trance Dance</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg18.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>사춘기 하</p><p>악동뮤지션 / 2017</p>
+                                            <p>- 수록곡 -</p><p>01. 생방송 live<br>02. 리얼리티 reality<br>
+                                               03. 오랜 날 오랜 밤 last goodbye</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg19.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>Where We Were Together</p><p>Say Sue Me / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. Let It Begin<br>02. But l Like You<br>03. Old Town</p>  
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="img/sin3/sin3_3/bg20.jpg">
+                                        <div class="sin3_3hide2">
+                                            <p>Hitch</p><p>강이채 / 2018</p>
+                                            <p>- 수록곡 -</p><p>01. HITCH<br>02. FOOLISH<br>03. 안녕</p>  
+                                        </div>
+                                </li>
+                            </ul>
+                        </div>	
+				
+						<div class="footer1">
+									<iframe name="footer" width=100% height=195px
+                                     src="footer.html" scrolling="no" frameborder=0></iframe>
+                        </div>
+				</div>
+				
+			</div>
+			
+			
+			<div id="sin4" class="sin">
+                    <div id="sin4_0">
+                        <h2>P R I N C I P L E S</h2>
+                        <div id="sin40_menu">
+                            <ul>
+                                <li class="menu1">1 . &nbsp; I n s p i r i n g</li>
+                                <li class="menu2">2 . &nbsp; V i t a l i z i n g</li>
+                                <li class="menu3" style="width:175px;">3 . &nbsp; P i v o t a l</li>
+                                <li class="menu4">4 . &nbsp; T i m e l e s s</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sin40middle">
+							<div id="text1">
+                                <ul>
+                                    <li><h3>Good books stimulate<br>and provoke.</h3></li>
+                                    <li>
+                                        <p>좋은 음악은 영감을 깨우고 자극한다. 듣는 이에게 영감을 주는 음악을 선택할 것. 
+                                        멜로디와 사운드, 가사와 표현뿐 아니라 듣는 이의 감성과 마음을 자극하고 나아가 창작욕과 심미안을 일깨우는 음악이 좋은 음악이다.</p>
+                                    </li>
+                                </ul>    
+                            </div>
+                            <div id="text2">
+                                <ul>
+                                    <li><h3>Good music vitalizes<br>daily lives.</h3></li>
+                                    <li>
+                                        <p>좋은 음악은 일상에 생동감을 더한다. 음악은 삶과 함께하는 일상의 예술이다. 
+                                        청자에게 감상의 경험을 넘어 삶을 보다 긍정적으로 바라볼 수 있는 에너지와 위안을 주는 음악이 좋은 음악이다.</p>       
+                                    </li>
+                                </ul>    
+                            </div>
+                            <div id="text3">
+                                <ul>
+                                    <li><h3>Find music that has<br>influenced the field.</h3></li>
+                                    <li>
+                                        <p>선구자적인 전환점을 제시한 음악에 주목할 것. 
+                                        독창적인 시도와 새로운 시선으로 장르의 흐름을 바꾼 의미 있는 영향을 남긴 음악을 선택한다.이들의 발자취가 곧 대중음악의 역사다.</p>
+                                    </li>
+                                </ul>    
+                            </div>
+                            <div id="text4">
+                                <ul>
+                                    <li style="width:440px;"><h3>Do not leave out any timeless<br>classics in music.</h3></li>
+                                    <li style="margin-left:59px; left:440px;">
+                                        <p>진정한 음악은 시대를 초월한다. 고전은 유행을 넘어 꾸준히 새로운 음악의 레퍼런스로 재해석된다. 
+                                        현재 대중음악의 밑바탕이 된 고전과 더불어, 다음 세대에도 고전이 될 가능성이 높은 음악을 선택할 것.
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div> 
+                    </div>
+                    
+					<div id="sin4_1">
+						<h2>MUSIC GEAR </h2>
+						<p class="sin4_1_text">더 좋은 사운드와 디자인으로 음악을 즐기기 위한 뮤직기어</p>
+						<div class="sin4_1_sub">
+								<p>분야별 전문성과 권위 있는 수상 기록을 통해 엄선한 턴테이블과 헤드폰, 이어폰을 비롯해 국내외 주요 매거진이 주목한 신진 브랜드들을 한 발 앞서 소개합니다.</p>
+								<p style="margin-top:15px; font-size:13px; color:gray">특히, 감각적인 빈티지 디자인과 클래식에도 손색 없는 음질을 자랑하는 GPO의 턴테이블을 국내 최초로 정식 수입해 선보입니다.<br>
+									60여년간 수작업만을 고집해 온 Grado의 헤드폰과 탁월한 디자인으로 여러 차례 세계 대회에서 수상한 덴마크 브랜드 AIAIAI의 이어폰도 만날 수 있습니다.</p>
+						</div>
+						
+						<div id="sin4_1_imgs">
+									<ul>
+										<li>
+											<img src="img/sin4/sin4_1/sin4-1.jpg"
+											onmouseover="this.src='img/sin4/sin4_1/sin4-2.jpg'"
+											onmouseout="this.src='img/sin4/sin4_1/sin4-1.jpg'">
+										</li>
+										<li>
+											<img src="img/sin4/sin4_1/sin4-3.jpg"
+											onmouseover="this.src='img/sin4/sin4_1/sin4-4.jpg'"
+											onmouseout="this.src='img/sin4/sin4_1/sin4-3.jpg'">
+										</li>
+										<li>
+											<img src="img/sin4/sin4_1/sin4-5.jpg"
+											onmouseover="this.src='img/sin4/sin4_1/sin4-6.jpg'"
+											onmouseout="this.src='img/sin4/sin4_1/sin4-5.jpg'">
+										</li>
+										<li>
+											<img src="img/sin4/sin4_1/sin4-7.jpg"
+											onmouseover="this.src='img/sin4/sin4_1/sin4-8.jpg'"
+											onmouseout="this.src='img/sin4/sin4_1/sin4-7.jpg'">
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<p> <font color=gray>VINYL</font></p>
+											<p>빈티지 포스터 세트</p>
+										</li>
+										<li>
+											<p> <font color=gray>CD</font></p>
+											<p>명반 CD 모음집</p>
+										</li>
+										<li>
+											<p> <font color=gray>HEADPHONE</font></p>
+											<p>Grado의 헤드폰</p>
+										<li>
+											<p> <font color=gray>TURNTABLE</font></p>
+											<p>GPO의 턴테이블</p>
+										</li>
+									</ul>
+						</div>
+					</div>
+					
+					<div id="sin4_2">
+						<h2>ACCESSORIES</h2>
+						<p class="sin4_2_text">일상을 음악처럼 즐길 수 있는 패션&라이프스타일 소품</p>
+						<div class="sin4_2_sub">
+								<p>음악이 일상에 들어오는 순간, 삶은 더욱 다이내믹한 즐거움으로 넘쳐난다.</p>
+								<p style="margin-top:15px; font-size:13px; color:gray">Vinyl & Plastic에서는 음악을 사랑하는 힙스터로부터 사랑 받아 온 패션 아이템을 쇼핑할 수 있다.<br>
+									유니버설뮤직의 머천다이즈 브랜드로 ‘More than Music’ 모토 아래 해외 아티스트의 독보적인 컨텐츠에 스트리트 감성을 더한 브라바도(Bravado)를 만나보자.</p>
+						</div>
+						
+						<div id="sin4_2_bac"></div>
+						<div id="sin4_2_img">
+							<img src="img/sin4/sin4_2/sin4_big.jpg">
+						</div>
+						<div id="sin4_2_logo">
+							<img src="img/sin4/sin4_2/sin4_logo.png">
+						</div>
+						<div id="sin4_2_sm">
+							<ul>
+								<li style="margin-left:0px;"><img src="img/sin4/sin4_2/sin4_sm1.jpg"></li>
+								<li><img src="img/sin4/sin4_2/sin4_sm2.jpg"></li>
+								<li><img src="img/sin4/sin4_2/sin4_sm3.jpg"></li>
+								<li><p style="line-height:180px;  background:white;">더보기</p></li>
+							</ul>
+							<ul>
+								<li style="margin-left:0px;">OUTER</li>
+								<li>SWEATER</li>
+								<li>SHIRT</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="sin4_3">
+				        <h2>SEOUL RECORD MAP</h2>
+						<p class="sin4_3_text">서울 시내 레코드샵 소개  <font style="margin-top:15px; font-size:13px; color:gray">&nbsp;&nbsp;&nbsp;(SEOUL RECORD MAP은 Vinyl & Plastic 매장에도 비치되어 있습니다.)</font></p>
+						<div class="sin4_3_sub">
+								<p>오너만의 취향과 관점을 뚜렷하게 드러내며 각기 다른 개성을 자랑하는 작지만 강한 서울 시내의 레코드 샵들을 소개합니다.</p>
+                        </div>
+                        
+					    <div id="sin4_3_map">
+					           <img src="img/sin4/sin4_3/map.jpg">
+					    </div>
+						<div id="sin4_3icon">
+								<ul class="sin4_3icon1">
+									<li class="con11"><i class="fab fa-itunes"></i></li>
+									<li class="con12"><i class="fas fa-compact-disc"></i></li>
+									<li class="con13"><i  class="fas fa-digital-tachograph"></i></li>
+								</ul>
+								<ul class="sin4_3icon2">
+									<li>VINYL</li>
+									<li style="width:50px;">CD</li>
+									<li style="margin-left:80px;">CASETTE</li>
+								</ul>
+						</div>
+						
+						 <h2 style="top:870px; font-size:23px; color:#434343;">서울 종로 · 중구 · 용산</h2>
+						<div id="sin4_3text">
+								<ul style="margin-top:30px;">
+										<li><p>(1)</p>
+												<ul class="sin4_3icon3">
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>뮤직코리아</p>
+												<p>뮤직코리아의 명동 지점으로 다양한<br> 장르의 신보를 구비한 매장이다.</p>
+												<p>ⓐ. 서울시 중구 명동8길 52 삼영빌딩<br>ⓣ. 02-3789-8210
+												<br>ⓦ. www.musickorea.asia</p>
+										</li>
+										<li><p>(2)</p>
+												<ul class="sin4_3icon3">
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>뮤직프라자</p>
+												<p>역사가 오래된 만큼 옛날가요와 올드<br>팝에 강한 종로 일대의 어르신들에게 사랑받고 있다.</p>
+												<p>ⓐ. 서울시 종로구 종로 144-1<br>ⓣ. 02-2274-9994</p>
+										</li>
+										<li><p>(3)</p>
+												<ul class="sin4_3icon3">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>부루의뜨락</p>
+												<p>취미로 시작했던 작은 샵이 바이닐<br>마니아들의 보물창고로 거듭났다.
+												<br>전문가의 음반 가이드를 받을 수 있다.</p>
+												<p>ⓐ. 서울시 중구 명동 8나길 37-1<br>ⓣ. 02-778-7309</p>
+										</li>
+										<li><p>(4)</p>
+												<ul class="sin4_3icon3">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>서울레코드</p>
+												<p>동네에 하나쯤 있을 법 한 정감가는<br>매장. 수많은 바이닐을 취급하며
+												<br>신보 CD까지 다양하게 갖추고 있다.</p>
+												<p>ⓐ. 서울시 종로구 종로 154(종로3가)<br>ⓣ. 02-2265-9298
+												<br>ⓦ. www.seoulrecord.net</p>
+										</li>
+										<li><p>(5)</p>
+												<ul class="sin4_3icon3">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>소리아</p>
+												<p>커피한잔과 함께 느긋하게 음악을<br>들어보고 구매할 수 있는 음반샵.
+												<br>철저한 관리, 등급을 엄격하게 정한다.</p>
+												<p>ⓐ. 서울시 종로66길 18 신원빌딩 201호<br>ⓣ. 02-2236-8535
+												<br>ⓦ. www.soriah.co.kr</p>
+										</li>
+								</ul>
+								
+								<ul style="margin-top:25px;">
+										<li><p>(6)</p>
+												<ul class="sin4_3icon3">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+													<li class="con13"><i  class="fas fa-digital-tachograph"></i></li>
+												</ul>
+												<p>씨디마트</p>
+												<p>종로3가의 터줏대감. 다양한 CD와<br>중고 바이닐, 이제는 찾기 어려운 카세
+												<br>트 테이프들이 벽을 가득 채우고 있다.</p>
+												<p>ⓐ. 서울시 종로구 종로 150<br>ⓣ. 02-2285-4117
+										</li>
+										<li><p>(7)</p>
+												<ul class="sin4_3icon3">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>우주만물</p>
+												<p>이름 그대로 '만물'을 취급한다.<br>바이닐은 유명하든 안 유명하든 취향이
+												<br>담긴 음악을 선택한다.</p>
+												<p>ⓐ. 서울시 중구 충무로9길 11 3층<br>ⓣ. 010-5630-6699</p>
+										</li>
+										<li><p>(8)</p>
+												<ul class="sin4_3icon3">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>LP 4989</p>
+												<p>100% 시험청음을 통해 검증된 바이닐<br>만을 취급하는 음반샵으로 ABC순으로
+												<br> 정리되어 원하는 음반을 찾기 쉽다.</p>
+												<p>ⓐ. 서울시 중구 명동 8나길 37-1<br>ⓣ. 02-778-7309</p>
+										</li>
+										<li><p>(9)</p>
+												<ul class="sin4_3icon3">
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>YesNo음악사</p>
+												<p>30년 전통의 K-Pop 위주 음반을 판매<br>한 매장으로 오래된 명반도 판매 한다.
+												<br>굿즈나 기타 악세서리도 구입 가능</p>
+												<p>ⓐ. 서울시 중구 소공로 102<br>명동지하쇼핑센터 바-1
+												<br>ⓣ. 02-775-4586</p>
+										</li>
+										<li><p>(10)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+													<li class="con13"><i  class="fas fa-digital-tachograph"></i></li>
+												</ul>
+												<p>장안레코드</p>
+												<p>1979년 오픈 후 음악 수집가들의<br>발걸음이 끝이지 않는 곳.
+												<br>연대와 장르를 불문한 명반이 많다.</p>
+												<p>ⓐ. 서울시 중구 마장로 9길 49-27<br>ⓣ. 02-2234-6328</p>
+										</li>
+								</ul>
+								<ul style="margin-top:25px;">
+										<li><p>(11)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>종로뮤직</p>
+												<p>2015년 개업한 신생 매장.<br>국악과 클래식에 조예가 깊으신 사장
+												<br>님께 관련 음반가이드를 받을 수 있다.</p>
+												<p>ⓐ. 서울시 종로구 종로 138<br>ⓣ. 02-2268-9817</p>
+										</li>
+										<li><p>(12)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+													<li class="con13"><i  class="fas fa-digital-tachograph"></i></li>
+												</ul>
+												<p>클리크 레코드</p>
+												<p>전 세계 독립 은반사의 언더그라운드<br>댄스뮤직을 중점 소개한다.
+												<br>장르 다양성의 컬렉션이 돋보인다.</p>
+												<p>ⓐ. 서울시 중구 을지로23길 8 3층</p>
+										</li>
+										<li><p>(13)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>레코드이슈</p>
+												<p>2013년 오픈한 이태원의 레코드숍<br>겸 카페로 다양한 장르의 음반에 둘러
+												<br>싸여 음악 이야기를 나눌 수 있다.</p>
+												<p>ⓐ. 서울시 용산구 회나무로13가길 57<br>ⓣ. 02-6105-6139
+												<br>ⓦ. www.facebook.com/recordissue</p>
+										</li>
+										<li><p>(14)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+												</ul>
+												<p>마술피리</p>
+												<p>바이닐 수입 전문 매장으로 판매 뿐 아<br>니라 '클래식 음악강좌 전문 감상실'을
+												<br>통해 지식을 공유하는 문화공간이다.</p>
+												<p>ⓐ. 서울시 용산구 청파로74 230호<br>ⓣ. 02-707-0799</p>
+										</li>
+										<li><p>(15)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>올리버</p>
+												<p>희귀음반과 신보를 포함해 다양한 장르<br>의 바이닐과 CD, 블루레이가 있다.</p>
+												<p>ⓐ. 서울시 용산구 청파로74 285호<br>ⓣ. 02-706-7389
+												<br>ⓦ. www.olivermusic.kr</p>
+										</li>
+								</ul>
+						</div>
+						
+						<h2 style="top:1580px; font-size:23px; color:#434343;">서울 회현 지하상가 
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 서울 마포 · 홍대</h2>
+						<div id="sin4_3text" style="height:220px;">
+								<ul style="margin-top:30px;">
+										<li><p>(16) ~ (22)</p>
+												<ul class="sin4_3icon3">
+													<li  style="margin-left:70px;" class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>THE DISK / 리빙사 / LP LOVE<br>코다 / 클립트 / 파스텔 / 파파게노</p>
+												<p>회현쇼핑센터에 모여있는 매장들이다.</p>
+												<p>ⓐ. 서울시 중구 소공로 58<br>회현지하쇼핑센터</p>
+										</li>
+										<li><p>(23)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+													<li class="con13"><i  class="fas fa-digital-tachograph"></i></li>
+												</ul>
+												<p>김밥레코즈</p>
+												<p>홍대입구역 근처에 위치한 레코드숍<br>독립 레이블을 통해 공연 기획과 앨범
+												<br>제작 등도 진행한다.</p>
+												<p>ⓐ. 서울시 마포구 월드컵북로 2길 90<br>ⓣ. 02-322-2395
+												<br>ⓦ. gimbabrecords.blogspot.kr</p>
+										</li>
+										<li><p>(24)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>메타북스</p>
+												<p>재즈, 클래식, 싸이키델릭,프로그레시<br>브, 하드락 등 다양한 장르가 모여 있다.</p>
+												<p>ⓐ. 서울시 마포구 와우산로 18길 20 2층<br>ⓣ. 02-3412-2735
+												<br>ⓦ. www.metavox.co.kr</p>
+										</li>
+										<li><p>(25) ~(28)</p>
+												<ul class="sin4_3icon3">
+													<li style="margin-left:70px;" class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+												</ul>
+												<p>시트레코드 / Alouette <br>엠투유레코드 / 웨스트브릿지</p>
+												<p>마포, 홍대 지역에 밀집되어있는 바이<br>닐 매장들이다.</p>
+												<p>ⓐ. 서울시 마포구 신촌로,와우산로</p>
+										</li>
+										<li><p>(26)</p>
+												<ul class="sin4_3icon4">
+													<li class="con11"><i class="fab fa-itunes"></i></li>
+													<li class="con12"><i class="fas fa-compact-disc"></i></li>
+													<li class="con13"><i  class="fas fa-digital-tachograph"></i></li>
+												</ul>
+												<p>토이레코드</p>
+												<p>빈티지 바이닐 팬이면 가야 할 음반샵.</p>
+												<p>ⓐ. 서울시 마포구 잔다리로 63<br>ⓣ. 070-4652-3858
+												<br>ⓦ. www.toyrecords.co.kr</p>
+										</li>
+								</ul>
+					</div>
+					
+					<div class="footer1">
+								<iframe name="footer" width=100% height=195px
+                                     src="footer.html" scrolling="no" frameborder=0></iframe>
+                        </div>
+			</div>
+        </div>
+		</section>
+	</body>
+
+	
+</html>
