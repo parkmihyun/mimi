@@ -1318,6 +1318,7 @@ nav ul#ju_menu li:nth-child(3) img {
 	background:none;
 	border:none;
     outline:none;
+    cursor:pointer;
 }
 #sin2 .sin2_rightB {
 	position:absolute;
@@ -1329,7 +1330,8 @@ nav ul#ju_menu li:nth-child(3) img {
 	font-size:25px;
 	background:none;
 	border:none;
-    outline:none;   
+    outline:none;  
+    cursor:pointer;
 }
 
 
